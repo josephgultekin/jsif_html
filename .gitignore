@@ -1,0 +1,10 @@
+.vagrant
+.buildpath
+.project
+.classpath
+logs
+.DS_Store
+.settings/*
+assets/*
+cutups/*
+
