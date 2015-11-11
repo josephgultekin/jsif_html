@@ -10,7 +10,8 @@ body {
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;		
+    font-size: 14px;
+    line-height: 28px;		
 }
 
 body {
@@ -29,9 +30,33 @@ body.page-blog-detail {
     background: url(/img/bg-hero-blog-detail.png) top center no-repeat fixed;
 }
 
+body.page-tour-overview {
+    background: url(/img/bg-hero-tour-overview.png) top center no-repeat fixed;
+}
+
+body.page-blog-overview {
+    background: url(/img/bg-hero-blog-overview.png) top center no-repeat fixed;
+}
+
+body.page-tour-overview .image-bg-fluid-height {
+    padding: 40px 0;	
+}
+
+body.page-blog-overview .image-bg-fluid-height {
+    padding: 40px 0;    
+}
+
 section.subheader {
 	margin-top: 450px;
 	padding: 0 35px;
+}
+
+body.page-blog-overview section.subheader {
+    margin-top: 80px;	
+}
+
+body.page-blog-overview section.subheader .form-group {
+	margin-top: 40px;
 }
 
 section.subheader .container .row h3 {
@@ -333,6 +358,12 @@ header .container .row h3 {
     margin: 0;
 }
 
+section#experience .row h3 {
+    font-family: Earthwerk !important;
+    font-size: 21px;
+    color: #50a8c2;    	
+}
+
 .container .row .col-left,
 .container .row .col-right {
 	float: left;
@@ -425,6 +456,22 @@ header .container .row h3 {
     opacity: 0.5;
     font-family: Earthwerk;
     font-size: 18px;
+}
+
+.tours-grid-inner.single .thumb .title {
+    background: #df2f8f;
+    opacity: 1;
+    height: 75px;
+    padding: 15px;
+}
+
+.tours-grid-inner.single .thumb .title > span {
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
 }
     
 .tours-grid-inner .caption {
