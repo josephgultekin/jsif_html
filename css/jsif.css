@@ -7,6 +7,13 @@
 }
 
 body {
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;		
+}
+
+body {
 	background: url(/img/bg-hero.png) top center no-repeat fixed;
 }
 
@@ -288,14 +295,18 @@ header .container .row h1 {
 }
 
 header .container .row h3 {
-    font-family: Earthwerk;
+    font-family: Earthwerk !important;
     font-size: 16px;
+    text-transform: none;
     line-height: 24px;
-    color: #FFF;    
+    color: #FFF; 
 }
 
 .col-lg-12 .col-lg-6 {
 	padding: 0;
+    display: inline-block;
+    float: left;
+    width: 50%; 
 }
 
 .container .row h2 {
@@ -324,8 +335,16 @@ header .container .row h3 {
 
 .container .row .col-left,
 .container .row .col-right {
-	width: 50%;
 	float: left;
+}
+
+.container .row .col-left {
+	width: 48%;
+}
+
+.container .row .col-right {
+	padding: 10px 0 0 0;
+    width: 52%;
 }
 
 .section-fixed {
@@ -374,6 +393,10 @@ header .container .row h3 {
 	color: #999;
 }
 
+.summary {
+	font-weight: 700;
+}
+
 .section-image .caption .date {
     color: #FFF;
     display: block;   
@@ -386,20 +409,32 @@ header .container .row h3 {
 .tours-grid-inner .thumb {
     position: relative;
 }
-    
+
+.tours-grid-inner .thumb img {
+    width: 100%;	
+}
+
 .tours-grid-inner .thumb .title {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 10px 15px;
+    padding: 8px 15px 2px 15px;
     color: #FFF;
+    background: #000;
+    opacity: 0.5;
+    font-family: Earthwerk;
+    font-size: 18px;
 }
     
 .tours-grid-inner .caption {
     background: #df2f8f;
-    padding: 10px 15px;
+    padding: 7px 15px;
     color: #FFF;
+}
+
+.tours-grid-inner .caption span {
+    text-transform: uppercase;	
 }
 
 #blog .sub-section-heading.left {
@@ -500,7 +535,7 @@ footer #socialMediaConnect ul {
     border: none;
     width: 200px;
     padding: 10px 0 5px 0;
-    margin: 10px 10px 5px 10px;
+    margin: 10px 20px 5px 0;
 }
 
 .btn-default-purple:hover, .btn-default-purple:active, .btn-default-purple:focus {
@@ -548,7 +583,14 @@ footer #socialMediaConnect ul {
         display: inline-block;
         float: left;
     }
-    
+}
+
+@media (min-width:1200px) {
+    .tours-grid-inner {
+        padding: 0;
+        border: 9px solid #FFF;
+        margin-bottom: 30px;
+    }	
 }
 
 @media(max-width:1199px) {
@@ -567,10 +609,32 @@ footer #socialMediaConnect ul {
     .navbar-nav > li a span {
         line-height: 13px;
     }
+    
+    .tours-grid-inner {
+        padding: 0;
+        border: 9px solid #FFF;
+        margin-bottom: 30px;
+    }   
+    
+    .blog-grid-inner {
+        margin-bottom: 20px;
+        display: inline-block;
+        float: left;
+        width: 100%;
+    }
 }
 
 @media(max-width:992px) {
     .container.subnav {
+        display: none;
+    }
+    
+    .tours-grid-inner {
+       border: 10px solid #FFF;
+       margin-bottom: 20px; 
+    }
+    
+    .row.load-more {
         display: none;
     }
 }
@@ -719,7 +783,6 @@ footer #socialMediaConnect ul {
 	    width: 100%;
 	    float: left;
 	    margin-bottom: 20px;
-	    border: 5px solid #FFF;
 	}
 	
 	.container .row .col-left, .container .row .col-right {
@@ -732,14 +795,17 @@ footer #socialMediaConnect ul {
 	}
 	
 	.container .row .col-right {
-	   background: #df2f8f;
-	   padding: 5px;
-	   color: #FFF;
+	   padding: 10px 0;
 	}
 	    
     .row {
         margin: 0;
         position: relative;
+    }
+    
+    .row.load-more {
+        text-align: center;
+        padding-bottom: 40px;
     }
     
     footer .container {
@@ -774,4 +840,20 @@ footer #socialMediaConnect ul {
 	#socialMediaConnect {
 	   float: left;
 	}
+	
+	.tours-grid-inner {
+       border: 10px solid #FFF;
+       margin-bottom: 20px;	
+	}
+	
+	.date {
+	   font-size: 18px;
+	   line-height: 48px;
+	}
+	
+	.summary {
+        font-weight: 700;
+	    font-size: 18px;
+	    line-height: 21px;
+    }
 }

@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Full Width Pics - Start Bootstrap Template</title>
+    <title>Discover Amazing Experiences</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
 
 </head>
 
-<body>
+<body class="page-home">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -47,6 +47,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <li class="searchBox mobile">
+                        <form id="search-form" class="form-inline" role="form" method="post" action="" target="_self">
+                            <div class="input-group">
+                                <input type="text" class="searchbox form-control search-form" placeholder="">
+                                <!--DO NOT NEED TRAILING SLASH "/" As HTML5 FORMS SLASHES ARE NO LONGER REQUIRED-->
+                                <span class="input-group-btn">
+                                  <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q">
+                                      <i class="fa fa-search"></i>
+                                  </button>
+                                </span>                     
+                            </div>
+                        </form>
+                    </li>                  
                     <li>
                         <a href="#">
                             <img src="/img/icon-nav-bytour.png" />
@@ -74,38 +87,46 @@
                     <li class="socialMedia">
                         <h3>Connect with us:</h3>
                         <div id="socialMediaConnect">
-	                        <ul>
-	                            <li class="mediaIcon">
-	                                <a href="#" target="_blank">
-	                                    <img src="/img/icon-nav-social-fb.png" alt="Follow JSIF on Facebook" style="opacity: 1;">
-	                                </a>
-	                            </li>
-	                            <li class="mediaIcon">
-	                                <a href="#" target="_blank">
-	                                    <img src="/img/icon-nav-social-tweet.png" alt="Follow JSIF on Twitter" style="opacity: 1;">
-	                                </a>
-	                            </li>
-	                            <li class="mediaIcon">
-	                                <a href="#" target="_blank">
-	                                    <img src="/img/icon-nav-social-pinterest.png" alt="Follow JSIF on Pinterest" style="opacity: 1;">
-	                                </a>
-	                            </li>
-	                            <li class="mediaIcon">
-	                                <a href="#" target="_blank">
-	                                    <img src="/img/icon-nav-social-insta.png" alt="Follow JSIF on Instagram" style="opacity: 1;">
-	                                </a>
-	                            </li>
-	                            <li class="mediaIcon">
-	                                <a href="#" target="_blank">
-	                                    <img src="/img/icon-nav-social-email.png" alt="Follow JSIF Newsletter" style="opacity: 1;">
-	                                </a>
-	                            </li>                                                        
-	                        </ul>
-	                    </div>
+                            <ul>
+                                <li class="mediaIcon">
+                                    <a href="#" target="_blank">
+                                        <img src="/img/icon-nav-social-fb.png" alt="Follow JSIF on Facebook" style="opacity: 1;">
+                                    </a>
+                                </li>
+                                <li class="mediaIcon">
+                                    <a href="#" target="_blank">
+                                        <img src="/img/icon-nav-social-tweet.png" alt="Follow JSIF on Twitter" style="opacity: 1;">
+                                    </a>
+                                </li>
+                                <li class="mediaIcon">
+                                    <a href="#" target="_blank">
+                                        <img src="/img/icon-nav-social-pinterest.png" alt="Follow JSIF on Pinterest" style="opacity: 1;">
+                                    </a>
+                                </li>
+                                <li class="mediaIcon">
+                                    <a href="#" target="_blank">
+                                        <img src="/img/icon-nav-social-insta.png" alt="Follow JSIF on Instagram" style="opacity: 1;">
+                                    </a>
+                                </li>
+                                <li class="mediaIcon">
+                                    <a href="#" target="_blank">
+                                        <img src="/img/icon-nav-social-email.png" alt="Follow JSIF Newsletter" style="opacity: 1;">
+                                    </a>
+                                </li>                                                        
+                            </ul>
+                        </div>
                     </li>
                     <li class="searchBox">
-                        <form>
-                            <input type="text" name="search" class="searchbox glyphicon-search" />
+                        <form id="search-form" class="form-inline" role="form" method="post" action="" target="_self">
+                            <div class="input-group">
+                                <input type="text" class="searchbox form-control search-form" placeholder="">
+                                <!--DO NOT NEED TRAILING SLASH "/" As HTML5 FORMS SLASHES ARE NO LONGER REQUIRED-->
+                                <span class="input-group-btn">
+                                  <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q">
+                                      <i class="fa fa-search"></i>
+                                  </button>
+                                </span>                     
+                            </div>
                         </form>
                     </li>                   
                 </ul>
@@ -115,6 +136,7 @@
         <!-- /.container -->
     </nav>
 
+
     <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
     <header class="image-bg-fluid-height">
@@ -122,8 +144,8 @@
             <div class="row">
                 <h1>Discover amazing experiences<br/>in the home of alright</h1>
                 <h3>community Experiences in Jamaica is all about the fun you can have,<br />and the good people you can meet when you take the path less traveled.</h3>
-                <button>Explore our tours</button>
-                <button>Watch the video</button>
+                <button type="button" class="btn btn-default-purple">Explore our tours</button>
+                <button type="button" class="btn btn-default-purple">Watch the video</button>
             </div>
         </div>
     </header>
@@ -136,15 +158,15 @@
                     <div class="grid row">
                         <div class="tours-grid col-lg-4">
                             <div class="tours-grid-inner">
-		                       <div class="thumb">
-		                           <img src="/img/img-placeholder-365x215.jpg" alt="Blue and John Crow Mountains National Park" />
-		                           <span class="title">Blue and John Crow Mountains National Park</span>
-		                       </div>
-		                       <div class="caption">
-		                           <span>Great for:</span> Active Types, Hiking, Sightseeing
-		                       </div>
-		                    </div>
-	                    </div>
+                               <div class="thumb">
+                                   <img src="/img/img-placeholder-365x215.jpg" alt="Blue and John Crow Mountains National Park" />
+                                   <span class="title">Blue and John Crow Mountains National Park</span>
+                               </div>
+                               <div class="caption">
+                                   <span>Great for:</span> Active Types, Hiking, Sightseeing
+                               </div>
+                            </div>
+                        </div>
                         <div class="tours-grid col-lg-4">
                             <div class="tours-grid-inner">
                                <div class="thumb">
@@ -238,40 +260,17 @@
                        </div>                                          
                     </div>
                 </div>
-            </div>                      
+            </div>                  
         </div>
     </section>
 
+    
     <!-- Blog Section -->
     <section id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <h2 class="sub-section-heading left">Hot from the blog</h2>
-                    <div class="row">
-	                    <div class="col-lg-12">
-	                        <div class="blog-grid-inner">
-	                            <div class="col-lg-6">
-	                               <div class="col-left">
-	                                   <img src="/img/img-placeholder-176x98.jpg" />
-	                               </div>
-	                               <div class="col-right">
-                                       <div class="date">13/10/2015</div>
-                                       <div class="summary">Lorem ipsum dolor sit atem segdum ipsum dolor ipsum</div>
-                                   </div>
-	                            </div>
-                                <div class="col-lg-6">
-                                   <div class="col-left">
-                                       <img src="/img/img-placeholder-176x98.jpg" />
-                                   </div>
-                                   <div class="col-right">
-                                       <div class="date">13/10/2015</div>
-                                       <div class="summary">Lorem ipsum dolor sit atem segdum ipsum dolor ipsum</div>
-                                   </div>
-                                </div>
-		                   </div>
-		                </div>
-		            </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="blog-grid-inner">
@@ -296,18 +295,49 @@
                            </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-grid-inner">
+                                <div class="col-lg-6">
+                                   <div class="col-left">
+                                       <img src="/img/img-placeholder-176x98.jpg" />
+                                   </div>
+                                   <div class="col-right">
+                                       <div class="date">13/10/2015</div>
+                                       <div class="summary">Lorem ipsum dolor sit atem segdum ipsum dolor ipsum</div>
+                                   </div>
+                                </div>
+                                <div class="col-lg-6">
+                                   <div class="col-left">
+                                       <img src="/img/img-placeholder-176x98.jpg" />
+                                   </div>
+                                   <div class="col-right">
+                                       <div class="date">13/10/2015</div>
+                                       <div class="summary">Lorem ipsum dolor sit atem segdum ipsum dolor ipsum</div>
+                                   </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="row load-more">
+		                <div class="col-lg-12">
+		                    <button type="button" class="btn btn-default-purple">Load more articles</button>
+		                </div>
+		            </div>
                 </div>
                 <div class="col-lg-4">
                     <h2 class="sub-section-heading">Got a question? Get an answer</h2>
                     <h3>Get the inside scoop from our experts here in Jamaica.</h3>
-                    <button>Ask a question</button>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default-purple">Ask a question now!</button>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -365,6 +395,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" language="javascript" src="/js/jquery.carouFredSel-6.0.5-packed.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jsif.js"></script>
 
 </body>
 

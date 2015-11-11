@@ -8,3 +8,6 @@ logs
 assets/*
 cutups/*
 
+/cutups/
+/assets/
+/.settings/
