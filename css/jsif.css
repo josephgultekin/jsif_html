@@ -7,6 +7,7 @@
 }
 
 body {
+	overflow-x: hidden;
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
     font-weight: 600;
@@ -62,6 +63,7 @@ body.page-blog-overview section.subheader .form-group {
 section.subheader .container .row h3 {
     font-family: Earthwerk !important;
     font-size: 32px;
+    letter-spacing: 1px;
     line-height: 32px;
     color: #6b3077;	
 }
@@ -69,6 +71,7 @@ section.subheader .container .row h3 {
 section.subheader .container .row h4 {
     font-family: Earthwerk !important;
     font-size: 21px;
+    letter-spacing: 1px;
     line-height: 31px;
     color: #50a8c2; 
 }
@@ -120,6 +123,7 @@ section.gallery .container {
 .html_carousel div.slide h4 {
     font-family: Earthwerk !important;
     font-size: 21px;
+    letter-spacing: 1px;
     padding: 10px 0;
     line-height: 35px;
     text-align: center;
@@ -194,6 +198,7 @@ section.gallery .container {
 .navbar .container.subnav .row h3 {
     font-family: Earthwerk !important;
     font-size: 21px;
+    letter-spacing: 1px;
     line-height: 26px;
     color: #FFF;
     padding: 10px;	
@@ -240,6 +245,7 @@ section.gallery .container {
 .navbar-nav li.socialMedia h3 {
     font-family: Earthwerk;
     font-size: 16px;
+    letter-spacing: 1px;
     color: #FFF;
     padding: 10px 5px 0 5px;
     margin-bottom: 0;
@@ -309,19 +315,29 @@ li.mediaIcon {
 
 header .container .row {
     text-align: left;
-    margin: 115px 0 0;
+    margin: 150px 0 0 0;
     padding: 15px;
+}
+
+body.page-home header .container .row {
+    margin: 75px 0 0 0;
+}
+
+.image-bg-fluid-height {
+    padding: 70px 0 30px 0;	
 }
 
 header .container .row h1 {
     font-family: Earthwerk;
     font-size: 48px;
+    letter-spacing: 1px;
     color: #FFF;	
 }
 
 header .container .row h3 {
     font-family: Earthwerk !important;
     font-size: 16px;
+    letter-spacing: 1px;
     text-transform: none;
     line-height: 24px;
     color: #FFF; 
@@ -337,6 +353,7 @@ header .container .row h3 {
 .container .row h2 {
     font-family: Earthwerk;
     font-size: 32px;
+    letter-spacing: 1px;
     line-height: 32px;
     color: #50a8c2;
 }
@@ -361,6 +378,7 @@ header .container .row h3 {
 section#experience .row h3 {
     font-family: Earthwerk !important;
     font-size: 21px;
+    letter-spacing: 1px;
     color: #50a8c2;    	
 }
 
@@ -456,6 +474,21 @@ section#experience .row h3 {
     opacity: 0.5;
     font-family: Earthwerk;
     font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.tours-grid-inner .thumb .title .desc {
+	display:none;
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 0 0 10px 0;
+    position:relative;
+    bottom:0;
+    z-index:1;	
 }
 
 .tours-grid-inner.single .thumb .title {
@@ -469,7 +502,7 @@ section#experience .row h3 {
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 14px;
     display: block;
 }
@@ -478,6 +511,8 @@ section#experience .row h3 {
     background: #df2f8f;
     padding: 7px 15px;
     color: #FFF;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 .tours-grid-inner .caption span {
@@ -507,7 +542,7 @@ footer li, footer p, footer a {
 footer p.copyright {
 	font-family: 'Open Sans', sans-serif !important;
 	font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 12px;
 }
 
@@ -532,7 +567,8 @@ footer .container .col-lg-3 {
 footer .container .col-lg-3 h4 {
     font-family: Earthwerk;
     font-size: 24px;
-    color: #FFF;	
+    color: #FFF;
+    letter-spacing: 1px;
 }
 
 footer ul.menu li {
@@ -576,6 +612,7 @@ footer #socialMediaConnect ul {
 	background: #6b3077;
 	font-family: Earthwerk;
     font-size: 14px;
+    letter-spacing: 1px;
     line-height: 21px;
     color: #FFF;
     outline: 0;
@@ -879,6 +916,7 @@ footer #socialMediaConnect ul {
 	footer .container .col-lg-3 h4 {
 	    font-family: Earthwerk;
 	    font-size: 18px;
+	    letter-spacing: 0 !important;
 	    color: #FFF;
 	    float: left;
 	    width: 75px;
@@ -902,5 +940,9 @@ footer #socialMediaConnect ul {
         font-weight: 700;
 	    font-size: 18px;
 	    line-height: 21px;
+    }
+    
+    .tours-grid-inner .thumb .title {
+         font-size: 16px;
     }
 }
