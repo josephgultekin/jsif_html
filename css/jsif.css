@@ -258,6 +258,10 @@ section.gallery .container {
     padding: 0;
 }
 
+.dropdown-menu {
+    padding: 0;	
+}
+
 li.mediaIcon {
     padding: 0;
     float: left;
@@ -307,6 +311,28 @@ li.mediaIcon {
     border: 0;
     color: #FFF;
     padding: 0 10px;    
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    background:	#50a8c2;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    background: #50a8c2;
+    border: 0;
+}
+
+.dropdown-menu>li>a {
+    padding: 15px 20px;
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.dropdown-menu>li>a:hover {
+	color:#FFF;
+	background:#4096ad;
 }
 
 .glyphicon-search:before {
@@ -457,6 +483,7 @@ section#experience .row h3 {
 
 .tours-grid-inner .thumb {
     position: relative;
+    overflow: hidden;
 }
 
 .tours-grid-inner .thumb img {
@@ -478,8 +505,12 @@ section#experience .row h3 {
     cursor: pointer;
 }
 
+.page-home .tours-grid-inner .thumb .title {
+    bottom: -50px;	
+}
+
 .tours-grid-inner .thumb .title .desc {
-	display:none;
+	display:block;
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
     font-weight: 300;
@@ -790,7 +821,7 @@ footer #socialMediaConnect ul {
 	.navbar-nav > li {
 	    float: left;
 	    display: inline-block;
-	    padding: 0 25px;
+	    padding: 10px 10px 0 10px;
 	    width: 100%;
 	    min-height: 40px;
 	    text-align: left;
@@ -800,8 +831,35 @@ footer #socialMediaConnect ul {
 	    border-right: none;
 	}
 	
+	.navbar-nav > li:last-child {
+        border-bottom: 0;	
+	}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+	    color: #FFF;
+	    white-space: normal;
+	}
+
+	.navbar-nav>li>.dropdown-menu {
+	    background: #50a8c2 !important;
+	    border: 0;
+	    margin: 0 -10px;
+	}	
+	
+	.dropdown-menu>li>a {
+	   font-weight: 300;
+	}
+
+	.navbar-nav .open .dropdown-menu>li>a {
+	    padding: 15px 20px;
+	}
+		
 	.navbar-nav > li:hover {
 	   background: #6b3077;
+	}
+	
+	.navbar-nav > li ul li:hover {
+	   background: #4196ae;
 	}
 
     .navbar-nav > li.searchBox.mobile:hover {
@@ -830,12 +888,17 @@ footer #socialMediaConnect ul {
 	}
 	.nav>li>a>img {
 	    max-width: none;
-	    margin-left: -15px;
+	    margin-left: 0;
+	    margin-top: -10px;
 	}
 	
 	.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
 	    max-height: none;
 	    padding: 0;
+	}
+
+	.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+	    background: #6b3077;
 	}
 		
 	section {
