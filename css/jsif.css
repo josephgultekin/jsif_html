@@ -12,43 +12,12 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 28px;		
-}
-
-body {
-	background: url(/img/bg-hero.png) top center no-repeat fixed;
-}
-
-body.page-ask-question, body.page-book-now, body.page-template {
-    background: url(/img/bg-hero-ask.png) top center no-repeat fixed;
-}
-
-body.page-content-detail {
-    background: url(/img/bg-hero-tour-detail.png) top center no-repeat fixed;
-}
-
-body.page-blog-detail {
-    background: url(/img/bg-hero-blog-detail.png) top center no-repeat fixed;
-}
-
-body.page-tour-overview {
-    background: url(/img/bg-hero-tour-overview.png) top center no-repeat fixed;
-}
-
-body.page-blog-overview {
-    background: url(/img/bg-hero-blog-overview.png) top center no-repeat fixed;
-}
-
-body.page-tour-overview .image-bg-fluid-height {
-    padding: 40px 0;	
-}
-
-body.page-blog-overview .image-bg-fluid-height {
-    padding: 40px 0;    
+    line-height: 28px;
+    margin: 0 auto;	
 }
 
 section.subheader {
-	margin-top: 450px;
+	margin-top: 100px;
 	padding: 0 35px;
 }
 
@@ -78,6 +47,10 @@ section.subheader .container .row h4 {
 
 section {
 	padding: 35px;
+}
+
+section#tours {
+    padding-top: 70px;
 }
 
 section.gallery {
@@ -339,18 +312,34 @@ li.mediaIcon {
     content: "\e003";
 }
 
+header {
+    position: relative;
+}
+
+header.image-bg-fluid-height {
+    padding: 100px 0 0 0; 
+}
+
+.page-home header.image-bg-fluid-height {
+    padding: 0;	
+}
+
+header > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
 header .container .row {
     text-align: left;
     margin: 150px 0 0 0;
-    padding: 15px;
+    padding: 15px 0;
 }
 
 body.page-home header .container .row {
-    margin: 75px 0 0 0;
-}
-
-.image-bg-fluid-height {
-    padding: 70px 0 30px 0;	
+    margin: 200px 0 0 0;
 }
 
 header .container .row h1 {
@@ -779,7 +768,7 @@ footer .go-to-top span {
 
 @media(max-width:768px) {
 	section.subheader {
-	    margin-top: 450px;
+	    margin-top: 120px;
 	    padding: 0;
 	}
 	
@@ -944,7 +933,7 @@ footer .go-to-top span {
 	}
 
     header .container .row {
-        margin: 45px 0 0;
+        margin: 100px 0 0;
         padding: 15px 0;
     }
        
