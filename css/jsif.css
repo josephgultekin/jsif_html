@@ -17,12 +17,16 @@ body {
 }
 
 section.subheader {
-	margin-top: 100px;
+	margin: 0;
 	padding: 0 35px;
 }
 
-body.page-blog-overview section.subheader {
-    margin-top: 80px;	
+section#map {
+	padding: 35px 0;
+}
+
+section#map .container {
+    padding: 0;	
 }
 
 body.page-blog-overview section.subheader .form-group {
@@ -50,7 +54,7 @@ section {
 }
 
 section#tours {
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 section.gallery {
@@ -70,6 +74,18 @@ section.gallery .container {
 .html_carousel .gallery-pagination {
 	position: absolute;
 	left: 0;
+}
+
+.html_carousel.small .gallery-pagination {
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: 62px;
+}
+
+.html_carousel.small .gallery-pagination img {
+    display: inline-block;
+    height: auto;
 }
 
 .html_carousel .gallery-pagination img {
@@ -102,6 +118,25 @@ section.gallery .container {
     text-align: center;
 }
 
+.html_carousel.small div.slide h4 {
+    font-family: Earthwerk !important;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 15px 0 15px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.html_carousel.small div.slide h5 {
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0 15px;
+    margin: 0 0 10px 0;    
+}
+
 .html_carousel div.slide p {
     font-size: 16px;
     padding: 0 0 30px 100px;
@@ -110,6 +145,10 @@ section.gallery .container {
 .html_carousel div.slide h4, .html_carousel div.slide p {
     color: white;
     margin: 0;
+}
+
+.html_carousel.small div.slide div {
+    background-color: #771888;	
 }
 
 .Absolute-Center.is-Variable {
@@ -156,7 +195,7 @@ section.gallery .container {
 }
 
 .navbar .container.subnav {
-    background-color: #000;
+    background: url(/img/bg-000000-80.png) 0 0 repeat;
     height: 80px;
     opacity: 1.0;
     padding: 10px 30px;
@@ -273,7 +312,7 @@ li.mediaIcon {
     padding: 0 10px;	
 }
 
-/*to cange only one form and not all give unique class name like  class="search-form" */
+/*to change only one form and not all give unique class name like  class="search-form" */
 .navbar-nav li.searchBox > form .search-btn {
     border-radius: 0px 16px 16px 0px;
     background: url(/img/icon-searchbox.png) -4px 0 no-repeat #4196ae;
@@ -314,10 +353,12 @@ li.mediaIcon {
 
 header {
     position: relative;
+    z-index: -1;
 }
 
 header.image-bg-fluid-height {
-    padding: 100px 0 0 0; 
+    padding: 115px 0 0 0;
+    min-height: 480px;
 }
 
 .page-home header.image-bg-fluid-height {
@@ -329,6 +370,7 @@ header > img {
     top: 0;
     left: 0;
     right: 0;
+    margin: 0 auto;
     z-index: -1;
 }
 
@@ -453,6 +495,18 @@ section#experience .row h3 {
     color: #FFF;
 }
 
+section {
+    background: url(/img/bg-page-hr.png) center 0 repeat-y;	
+}
+
+section#tours {
+    background: url(/img/bg-page-panel.png) center 250px no-repeat;   
+}
+
+section#blog, section#related-articles {
+    background: url(/img/bg-page-btm.png) center -10px no-repeat; 	
+}
+
 .date {
 	color: #999;
 }
@@ -486,8 +540,7 @@ section#experience .row h3 {
     right: 0;
     padding: 8px 15px 2px 15px;
     color: #FFF;
-    background: #000;
-    opacity: 0.5;
+    background: url(/img/bg-000000-80.png) 0 0 repeat;
     font-family: Earthwerk;
     font-size: 18px;
     letter-spacing: 1px;
@@ -688,15 +741,47 @@ footer .go-to-top span {
     outline: 0;
     border-radius: 0;
     background: #d0d0d0;	
-}	
+}
+
+.best-for {
+    margin: 30px 0;
+}
+    
+.best-for ul {      
+    padding: 0;
+    float: left;      
+}
+
+.best-for ul li {    
+    float: left;
+    list-style-type: none;
+    padding: 0 10px;
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 48px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+.best-for ul li img {
+    float: left;	
+}
 
 @media (min-width:1240px) {
 	.container {
 	    width: 1240px;
 	}
 	
-	section.gallery .container {
+	section.gallery .container
+       width: 100%;
+    }
+    	
+	section#map .container {
 	   width: 100%;
+	   padding: 35px 0;
 	}
 	
 	.tours-grid-inner {
@@ -721,8 +806,32 @@ footer .go-to-top span {
 }
 
 @media(max-width:1199px) {
-    .container.subnav {
-        display: none;
+    body.page-home {
+        background: url(/img/bg-hero-m.png) center top no-repeat;
+    }
+    
+    body.page-content-detail {
+        background: url(/img/bg-hero-tour-detail-m.png) center top no-repeat;
+    }
+
+    body.page-tour-overview {
+        background: url(/img/bg-hero-tour-overview-m.png) center top no-repeat;
+    }
+
+    body.page-blog-detail {
+        background: url(/img/bg-hero-blog-detail-m.png) center top no-repeat;
+    }
+        
+    body.page-blog-overview {
+        background: url(/img/bg-hero-blog-overview-m.png) center top no-repeat;
+    }
+                
+    body.page-ask-question, body.page-book-now, body.page-template {
+        background: url(/img/bg-hero-ask-m.png) center top no-repeat;
+    }
+    
+    header > .hero-img {
+       display: none;
     }
     
     .navbar-nav > li.socialMedia {
@@ -737,6 +846,10 @@ footer .go-to-top span {
         line-height: 13px;
     }
     
+    .container.subnav {
+        display: none;
+    }
+    
     .tours-grid-inner {
         padding: 0;
         border: 9px solid #FFF;
@@ -749,9 +862,223 @@ footer .go-to-top span {
         float: left;
         width: 100%;
     }
+    
+    .navbar-header {
+        float: none;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+    
+    .navbar-nav>li {
+        float: none;
+    }
+    
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .navbar-collapse.collapse.in { 
+	  display: block!important;
+	}
+	
+	.collapsing {
+	  overflow: hidden!important;
+	}
+    
+    /* Changes */
+    .navbar-header {
+        width: auto;
+        border: none;
+    }
+    
+    .navbar-brand {
+        padding: 5px 0 5px 10px;
+    }
+    
+    .navbar-inverse .navbar-toggle {
+       border: none;
+       margin: 40px 20px 0 0;
+       background: url(/img/icon-hambuger-menu.png) top center no-repeat transparent !important;
+       border-color: transparent;
+       width: 48px;
+       height: 64px;
+    }
+    
+    .navbar-inverse .navbar-toggle .icon-bar {
+       display: none;
+    }
+    
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 30px;
+        height: 5px;
+        border-radius: 1px;
+    }
+    
+    .navbar-nav li.socialMedia, .navbar-nav li.searchBox {
+       display: none;
+    }
+    
+    .navbar-nav li.searchBox.mobile {
+       display: block;
+       width: 100%;
+       padding: 0 15px;
+    }
+    
+    .navbar-nav li.searchBox.mobile > form {
+        padding: 15px 0;
+        width: 100%;
+    }
+    
+    .navbar-nav {
+        float: left;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: transparent;
+        background: #50a8c2;
+    }
+    
+    .navbar-nav > li {
+        float: left;
+        display: inline-block;
+        padding: 10px 10px 0 10px;
+        width: 100%;
+        min-height: 40px;
+        text-align: left;
+        border-top: 1px solid #61bcd7;
+        border-bottom: 1px solid #4195ae;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .navbar-nav > li:last-child {
+        border-bottom: 0;   
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #FFF;
+        white-space: normal;
+    }
+
+    .navbar-nav>li>.dropdown-menu {
+        background: #50a8c2 !important;
+        border: 0;
+        margin: 0 -10px;
+    }   
+    
+    .dropdown-menu>li>a {
+       font-weight: 300;
+    }
+
+    .navbar-nav .open .dropdown-menu>li>a {
+        padding: 15px 20px;
+    }
+        
+    .navbar-nav > li:hover {
+       background: #6b3077;
+    }
+    
+    .navbar-nav > li ul li:hover {
+       background: #4196ae;
+    }
+
+    .navbar-nav > li.searchBox.mobile:hover {
+       background: transparent;
+    }
+        
+    .navbar-nav > li a span {
+        display: inline-block;
+        color: #FFF;
+        text-align: left;
+        font-family: Earthwerk !important;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 21px;
+        text-transform: uppercase;
+    }
+    
+    .nav>li>a, .nav>li>a:hover {
+       padding: 0;
+       text-decoration: none;
+    }
+    
+    .navbar-nav > li a:hover span {
+        text-decoration: none;
+    }
+    .nav>li>a>img {
+        max-width: none;
+        margin-left: 0;
+        margin-top: -10px;
+    }
+    
+    .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+        max-height: none;
+        padding: 0;
+    }
+
+    .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+        background: #6b3077;
+    }
+    
+    .container {
+        width: auto !important;
+    }     
 }
 
+@media only screen and (min-width:993px) and (max-width: 1199px) {
+    .tours-grid.col-lg-4 {
+        width: 50%;
+	    float: left;
+	    display: inline-block;
+    }
+    
+    .col-lg-6 {
+        width: 50%;
+        float: left;
+        display: inline-block;    
+    }
+    
+    footer .container .col-lg-9 {
+	    width: 60%;
+	    float: left;    
+    }
+   
+}
+   
 @media(max-width:992px) {
+	    
+    .navbar-nav li.searchBox.mobile {
+       display: block;
+       width: 100%;
+       padding: 0 15px;
+    }
+    
+    .navbar-nav li.searchBox.mobile > form {
+        padding: 15px 0;
+        width: 100%;
+    } 
+    
     .container.subnav {
         display: none;
     }
@@ -764,153 +1091,52 @@ footer .go-to-top span {
     .row.load-more {
         display: none;
     }
+    
+    .col-lg-6 {
+	    display: block;
+	    float: left;
+	    width: 100%;
+	}
+	
+    section#blog .col-lg-12 .col-lg-6 {
+        padding: 0;
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+    
+    .container .row .col-left, .container .row .col-right {
+        width: 100%;
+        float: left;
+    }
+    
+    .container .row .col-left img, .container .row .col-right {
+       width: 100%;
+    }
+    
+    .container .row .col-right {
+       padding: 10px 0;
+    }
+    
+    footer .go-to-top {
+        margin: -90px 0 0 0;        
+    }	
+	
+	footer .container .col-lg-9 {
+        width: 60%;
+        float: left;    
+    }
 }
 
 @media(max-width:768px) {
+	
 	section.subheader {
-	    margin-top: 120px;
+	    margin: 0;
 	    padding: 0;
 	}
 	
 	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
 	   padding: 0;
-	}
-	
-	.navbar-header {
-	    width: auto;
-	    border: none;
-	}
-	
-	.navbar-brand {
-	    padding: 5px 0 5px 10px;
-	}
-	
-	.navbar-inverse .navbar-toggle {
-	   border: none;
-	   margin: 40px 20px 0 0;
-	   background: url(/img/icon-hambuger-menu.png) top center no-repeat transparent !important;
-	   border-color: transparent;
-	   width: 48px;
-	   height: 64px;
-	}
-	
-	.navbar-inverse .navbar-toggle .icon-bar {
-	   display: none;
-	}
-	
-	.navbar-toggle .icon-bar {
-	    display: block;
-	    width: 30px;
-	    height: 5px;
-	    border-radius: 1px;
-	}
-	
-	.navbar-nav li.socialMedia, .navbar-nav li.searchBox {
-	   display: none;
-	}
-	
-	.navbar-nav li.searchBox.mobile {
-	   display: block;
-	   width: 100%;
-       padding: 0 15px;
-	}
-	
-	.navbar-nav li.searchBox.mobile > form {
-	    padding: 15px 0;
-	    width: 100%;
-	}
-	.navbar-nav {
-	    float: left;
-	    margin: 0;
-	    width: 100%;
-	}
-
-	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-	    border-color: transparent;
-	    background: #50a8c2;
-	}
-	
-	.navbar-nav > li {
-	    float: left;
-	    display: inline-block;
-	    padding: 10px 10px 0 10px;
-	    width: 100%;
-	    min-height: 40px;
-	    text-align: left;
-	    border-top: 1px solid #61bcd7;
-	    border-bottom: 1px solid #4195ae;
-	    border-left: none;
-	    border-right: none;
-	}
-	
-	.navbar-nav > li:last-child {
-        border-bottom: 0;	
-	}
-
-	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-	    color: #FFF;
-	    white-space: normal;
-	}
-
-	.navbar-nav>li>.dropdown-menu {
-	    background: #50a8c2 !important;
-	    border: 0;
-	    margin: 0 -10px;
-	}	
-	
-	.dropdown-menu>li>a {
-	   font-weight: 300;
-	}
-
-	.navbar-nav .open .dropdown-menu>li>a {
-	    padding: 15px 20px;
-	}
-		
-	.navbar-nav > li:hover {
-	   background: #6b3077;
-	}
-	
-	.navbar-nav > li ul li:hover {
-	   background: #4196ae;
-	}
-
-    .navbar-nav > li.searchBox.mobile:hover {
-       background: transparent;
-    }
-    	
-	.navbar-nav > li a span {
-	    display: inline-block;
-	    color: #FFF;
-	    text-align: left;
-	    font-family: Earthwerk !important;
-	    font-style: normal;
-	    font-weight: 300;
-	    font-size: 21px;
-	    line-height: 21px;
-	    text-transform: uppercase;
-	}
-	
-	.nav>li>a, .nav>li>a:hover {
-	   padding: 0;
-	   text-decoration: none;
-	}
-	
-	.navbar-nav > li a:hover span {
-	    text-decoration: none;
-	}
-	.nav>li>a>img {
-	    max-width: none;
-	    margin-left: 0;
-	    margin-top: -10px;
-	}
-	
-	.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-	    max-height: none;
-	    padding: 0;
-	}
-
-	.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-	    background: #6b3077;
 	}
 		
 	section {
@@ -936,26 +1162,6 @@ footer .go-to-top span {
         margin: 100px 0 0;
         padding: 15px 0;
     }
-       
-    .col-lg-12 .col-lg-6 {
-	    padding: 0;
-	    width: 100%;
-	    float: left;
-	    margin-bottom: 20px;
-	}
-	
-	.container .row .col-left, .container .row .col-right {
-	    width: 100%;
-	    float: left;
-	}
-	
-	.container .row .col-left img, .container .row .col-right {
-	   width: 100%;
-	}
-	
-	.container .row .col-right {
-	   padding: 10px 0;
-	}
 	    
     .row {
         margin: 0;

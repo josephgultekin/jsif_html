@@ -14,7 +14,7 @@ $( document ).ready(function() {
 			infinite    : false,
 			responsive	: true,
 			width		: '100%',		// automatically calculated
-			height		: '50%',		// automatically calculated
+			height		: '45%',		// automatically calculated
 			prev : "#foo1_prev",
 			next : "#foo1_next",
 			scroll		: {
@@ -27,7 +27,31 @@ $( document ).ready(function() {
 			items		: {
 				visible		: 1,
 				width		: null,
-				height		: '50%'
+				height		: '45%'
+			}
+		});
+	}
+
+	if( $("#experience-gallery").length > 0 ) {
+		$("#experience-gallery").carouFredSel({
+			circular    : true,
+			infinite    : false,
+			responsive	: true,
+			width		: '100%',		// automatically calculated
+			height		: '70%',		// automatically calculated
+			prev : "#foo2_prev",
+			next : "#foo2_next",
+			scroll		: {
+				fx			: "crossfade"
+			},
+			auto		: {
+				play			: false,
+				timeoutDuration	: null		//	5 * auto.duration
+			},
+			items		: {
+				visible		: 1,
+				width		: null,
+				height		: '70%'
 			}
 		});
 	}
