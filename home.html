@@ -167,12 +167,15 @@
 					</h3>
 					<button type="button" class="btn btn-default-purple">Explore
 						our tours</button>
-					<button type="button" class="btn btn-default-purple">Watch
+					<button type="button" data-target="#videoModal1" data-toggle="modal" class="btn btn-default-purple play-video">Watch
 						the video</button>
 				</div>
 			</div>
 		</div>
-		<img class="hero-img" src="/img/bg-hero.png" alt="Discover Amazing Experiences" />
+		<video class="hero-img" width="100%" loop="" autoplay="">
+                <source src="/video/jamaica.mp4" type="video/mp4">
+        </video>
+		<!-- <img class="hero-img" src="/img/bg-hero.png" alt="Discover Amazing Experiences" /> -->
 	</header>
 
 	<!-- Tours Grid Section -->
@@ -184,7 +187,8 @@
 						<div class="thumb target">
 							<img src="/img/img-home-1.jpg"
 								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Blue and John Crow Mountains National Park
+								class="title">
+								<span class="image-caption"><span>Blue and John Crow Mountains National Park</span></span>
 								<span class="desc">Visit with Jamaica's Rastafari people.
 									Warm and welcoming, they are happy to share with you their
 									values of equality, healthy living and connectedness with
@@ -201,8 +205,9 @@
 						<div class="thumb">
 							<img src="/img/img-home-2.jpg"
 								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Rastafarian village tourof trelawny <span
-								class="desc">Visit with Jamaica's Rastafari people. Warm
+								class="title">
+								<span class="image-caption"><span>Rastafarian village tourof trelawny</span></span>
+								<span class="desc">Visit with Jamaica's Rastafari people. Warm
 									and welcoming, they are happy to share with you their values of
 									equality, healthy living and connectedness with nature.</span>
 							</span>
@@ -217,8 +222,9 @@
 						<div class="thumb">
 							<img src="/img/img-home-3.jpg"
 								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Treasure beach fishing village <span
-								class="desc">Visit with Jamaica's Rastafari people. Warm
+								class="title">
+								<span class="image-caption"><span>Treasure beach fishing village</span></span>
+								<span class="desc">Visit with Jamaica's Rastafari people. Warm
 									and welcoming, they are happy to share with you their values of
 									equality, healthy living and connectedness with nature.</span>
 							</span>
@@ -230,11 +236,13 @@
 				</div>
 				<div class="tours-grid col-lg-4">
 					<div class="tours-grid-inner">
-						<div class="thumb">
-							<img src="/img/img-placeholder-365x215.jpg"
-								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Blue and John Crow Mountains National Park</span>
-						</div>
+                        <div class="thumb">
+                            <img src="/img/img-placeholder-365x215.jpg"
+                                alt="Blue and John Crow Mountains National Park" /> <span
+                                class="title">
+                                <span class="image-caption"><span>Blue and John Crow Mountains National Park</span></span>
+                                </span>
+                        </div>
 						<div class="caption">
 							<span>Great for:</span> Active Types, Hiking, Sightseeing
 						</div>
@@ -245,7 +253,9 @@
 						<div class="thumb">
 							<img src="/img/img-placeholder-365x215.jpg"
 								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Blue and John Crow Mountains National Park</span>
+								class="title">
+								<span class="image-caption"><span>Blue and John Crow Mountains National Park</span></span>
+								</span>
 						</div>
 						<div class="caption">
 							<span>Great for:</span> Active Types, Hiking, Sightseeing
@@ -254,11 +264,13 @@
 				</div>
 				<div class="tours-grid col-lg-4">
 					<div class="tours-grid-inner">
-						<div class="thumb">
-							<img src="/img/img-placeholder-365x215.jpg"
-								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Blue and John Crow Mountains National Park</span>
-						</div>
+                        <div class="thumb">
+                            <img src="/img/img-placeholder-365x215.jpg"
+                                alt="Blue and John Crow Mountains National Park" /> <span
+                                class="title">
+                                <span class="image-caption"><span>Blue and John Crow Mountains National Park</span></span>
+                                </span>
+                        </div>
 						<div class="caption">
 							<span>Great for:</span> Active Types, Hiking, Sightseeing
 						</div>
@@ -266,11 +278,13 @@
 				</div>
 				<div class="tours-grid col-lg-4">
 					<div class="tours-grid-inner">
-						<div class="thumb">
-							<img src="/img/img-placeholder-365x215.jpg"
-								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Blue and John Crow Mountains National Park</span>
-						</div>
+                        <div class="thumb">
+                            <img src="/img/img-placeholder-365x215.jpg"
+                                alt="Blue and John Crow Mountains National Park" /> <span
+                                class="title">
+                                <span class="image-caption"><span>Blue and John Crow Mountains National Park</span></span>
+                                </span>
+                        </div>
 						<div class="caption">
 							<span>Great for:</span> Active Types, Hiking, Sightseeing
 						</div>
@@ -278,11 +292,13 @@
 				</div>
 				<div class="tours-grid col-lg-4">
 					<div class="tours-grid-inner">
-						<div class="thumb">
-							<img src="/img/img-placeholder-365x215.jpg"
-								alt="Blue and John Crow Mountains National Park" /> <span
-								class="title">Blue and John Crow Mountains National Park</span>
-						</div>
+                        <div class="thumb">
+                            <img src="/img/img-placeholder-365x215.jpg"
+                                alt="Blue and John Crow Mountains National Park" /> <span
+                                class="title">
+                                <span class="image-caption"><span>Blue and John Crow Mountains National Park</span></span>
+                                </span>
+                        </div>
 						<div class="caption">
 							<span>Great for:</span> Active Types, Hiking, Sightseeing
 						</div>
@@ -293,7 +309,6 @@
 
 		</div>
 	</section>
-
 
 	<!-- Blog Section -->
 	<section id="blog">
@@ -353,15 +368,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="row load-more">
-						<div class="col-lg-12">
-							<button type="button" class="btn btn-default-purple">Load
-								more articles</button>
-						</div>
-					</div>
 				</div>
 				<div class="col-lg-4">
-					<h2 class="sub-section-heading">Got a question? Get an answer</h2>
+					<h2 class="sub-section-heading">Got a question?<br/>Get an answer</h2>
 					<h3>Get the inside scoop from our experts here in Jamaica.</h3>
 					<div class="form-group">
 						<button type="button" class="btn btn-default-purple">Ask
@@ -431,6 +440,29 @@
 		</div>
 		<!-- /.container -->
 	</footer>
+	
+    <!-- Modals -->
+    <!-- Use the modals below to showcase details! -->
+
+    <!-- Play Video Modal -->
+    <div class="jsif-modal modal fade" id="videoModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <button type="button" class="btn btn-default-purple">Exit full screen</button>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <video class="hero-img" width="100%" loop="" autoplay="">
+					                <source src="/video/jamaica.mp4" type="video/mp4">
+					        </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
@@ -441,6 +473,14 @@
 	<script type="text/javascript" language="javascript" src="/js/jquery.carouFredSel-6.0.5-packed.js"></script>
 	<script type="text/javascript" language="javascript" src="/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" language="javascript" src="/js/bootstrap-submenu.min.js"></script>
+	
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
+
+    <!-- Please call pinit.js only once per page -->
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+    	
 	<script type="text/javascript" language="javascript" src="/js/jsif.js"></script>
 
 </body>

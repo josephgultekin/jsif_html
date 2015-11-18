@@ -183,7 +183,7 @@
 	                 <div class="section-image-right">
 	                    <img src="/img/img-placeholder-562x389.jpg" />
 	                 </div>
-	                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+	                 <p class="lead-paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 	                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                 </div>
             </div>
@@ -192,7 +192,15 @@
                     <span class="label-sharethis">Share this:</span>
                 </div>
                 <div class="col-lg-11">
-                    <img src="/img/icon-share.png" alt="Share this" />
+                    <div class="share-this">
+	                    <ul>
+                            <li class="share-twitter"><a href="http://www.visitjamaica.com" title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.">Share on Twitter</a></li>	                    
+	                        <li class="share-fb"><a href="javascript:void(0)" title="Share on Facebook" target="_blank">Share on Facebook</a></li>
+	                        <li class="share-pinterest" title="Share on Pinterest"><a data-pin-config="hidden" data-pin-do="buttonPin" data-pin-custom="true" data-pin-height="32" data-pin-shape="round" data-pin-href="https://www.pinterest.com/pin/create/button/?guid=WPkCB_877Fic-1&amp;url=http%3A%2F%2Fwww.visitjamaica.com&amp;media=http%3A%2F%2Fwww.visitjamaica.com%2FMedia%2FDefault%2FHome%20Page%2FFamilyHolidays.jpg&amp;description=Sed%20ut%20perspiciatis%20unde%20omnis%20iste%20natus%20error%20sit%20voluptatem%20accusantium%20doloremque%20laudantium." data-pin-log="button_pinit"><img src="http://www.stregisrituals.com/custom/img/icon-pinterest.png" height="25"></a></li>
+                            <li class="share-googleplus"><a href="javascript:void(0)" title="Share on Google+" target="_blank">Share on Google+</a></li>
+	                        <li class="share-email"><a href="#emailModal1" class="portfolio-link" data-toggle="modal" title="Share via Email">Share via Email</a></li>
+	                    </ul>
+	                </div>
                 </div>
             </div>
         </div>
@@ -297,6 +305,67 @@
         <!-- /.container -->
     </footer>
 
+    <!-- Share via Email Modal -->
+    <div class="jsif-modal modal fade" id="emailModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <button type="button" class="btn btn-default-purple">Close</button>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Share with a friend</h2>
+                            <form name="sentMessage" id="contactForm" novalidate>
+                                <input type="hidden" name="sharedSection" id="sharedSection"
+                                    value="" />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                placeholder="Your Friend's Name *" name="name0" id="name0"
+                                                required
+                                                data-validation-required-message="Please enter your friend's name.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control"
+                                                placeholder="Your Friend's Email *" name="email0"
+                                                id="email0" required
+                                                data-validation-required-message="Please enter your friend's email address.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                placeholder="Your Name *" name="name1" id="name1" required
+                                                data-validation-required-message="Please enter your name number.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control"
+                                                placeholder="Your Email *" name="email1" id="email1"
+                                                required
+                                                data-validation-required-message="Please enter your email address.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-default-purple">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -306,6 +375,14 @@
     <script type="text/javascript" language="javascript" src="/js/jquery.carouFredSel-6.0.5-packed.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" language="javascript" src="/js/bootstrap-submenu.min.js"></script>
+    
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
+
+    <!-- Please call pinit.js only once per page -->
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        
     <script type="text/javascript" language="javascript" src="/js/jsif.js"></script>
 
 </body>

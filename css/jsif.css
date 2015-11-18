@@ -10,10 +10,19 @@ body {
 	overflow-x: hidden;
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 15px;
     line-height: 28px;
     margin: 0 auto;	
+}
+
+body p.lead-paragraph {
+	font-size: 18px;
+    font-weight: 600;	
+}
+
+nav {
+	z-index: 9999;
 }
 
 section.subheader {
@@ -80,7 +89,7 @@ section.gallery .container {
     position: absolute;
     right: 0;
     left: auto;
-    bottom: 62px;
+    bottom: 65px;
 }
 
 .html_carousel.small .gallery-pagination img {
@@ -122,7 +131,7 @@ section.gallery .container {
     font-family: Earthwerk !important;
     font-size: 18px;
     letter-spacing: 1px;
-    padding: 10px 15px 0 15px;
+    padding: 12px 15px 0 15px;
     line-height: 30px;
     text-align: left;
 }
@@ -135,6 +144,19 @@ section.gallery .container {
     font-size: 12px;
     padding: 0 15px;
     margin: 0 0 10px 0;    
+}
+
+.html_carousel.small div.slide span.slide-no {
+    float: left;
+    height: 60px;
+    width: 70px;
+    text-align: center;
+    font-family: Earthwerk !important;    
+    font-size: 42px;
+    line-height: 88px;
+    color: #FFF;
+    letter-spacing: 1px;
+    padding: 0 0 0 10px;	
 }
 
 .html_carousel div.slide p {
@@ -191,7 +213,7 @@ section.gallery .container {
 
 .navbar .container {
     background-color: #50a8c2;
-    height: 140px;
+    height: auto;
 }
 
 .navbar .container.subnav {
@@ -214,6 +236,10 @@ section.gallery .container {
     line-height: 26px;
     color: #FFF;
     padding: 10px;	
+}
+
+.navbar .container.subnav .col-lg-3 {
+	text-align: right;
 }
 
 .navbar-brand {
@@ -292,7 +318,7 @@ li.mediaIcon {
     border: none;
     float: left;
     width: 24%;
-    padding: 10px 2px;
+    padding: 10px 0 10px 10px;
     margin: 0 auto;
     text-align: center;
 }
@@ -306,6 +332,7 @@ li.mediaIcon {
     border-radius: 16px 0 0 16px;
     background: #4196ae;
     height: 32px;
+    width: 110px;
     outline: 0;
     border: 0;
     color: #FFF;
@@ -353,7 +380,7 @@ li.mediaIcon {
 
 header {
     position: relative;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
 header.image-bg-fluid-height {
@@ -362,10 +389,16 @@ header.image-bg-fluid-height {
 }
 
 .page-home header.image-bg-fluid-height {
-    padding: 0;	
+    padding: 0;
+    /*z-index: 9999;*/
 }
 
-header > img {
+.tours-grid.col-lg-4 {
+    padding-right: 0;
+    width: 32.175%;	
+}
+
+header > img, header > video {
     position: absolute;
     top: 0;
     left: 0;
@@ -376,7 +409,7 @@ header > img {
 
 header .container .row {
     text-align: left;
-    margin: 150px 0 0 0;
+    margin: 130px 0 0 0;
     padding: 15px 0;
 }
 
@@ -411,7 +444,7 @@ header .container .row h3 {
     font-family: Earthwerk;
     font-size: 32px;
     letter-spacing: 1px;
-    line-height: 32px;
+    line-height: 1.2em;
     color: #50a8c2;
 }
 
@@ -450,7 +483,7 @@ section#experience .row h3 {
 
 .container .row .col-right {
 	padding: 10px 0 0 0;
-    width: 52%;
+    width: 48%;
 }
 
 .section-fixed {
@@ -471,7 +504,7 @@ section#experience .row h3 {
 }
 
 .section-image {
-    float: right;
+    float: left;
     margin: 20px 0 20px 20px;
     border: 10px solid #FFF;
 }
@@ -507,12 +540,21 @@ section#blog, section#related-articles {
     background: url(/img/bg-page-btm.png) center -10px no-repeat; 	
 }
 
+section#related-articles .section-image {
+    margin: 0;
+}
+
 .date {
 	color: #999;
 }
 
+#blog-grid .date {
+    color: #FFF;
+}
+
 .summary {
 	font-weight: 700;
+	line-height: 18px;
 }
 
 .section-image .caption .date {
@@ -522,6 +564,7 @@ section#blog, section#related-articles {
   
 .row .right-align {
 	text-align: right;
+	padding: 0;
 }
 
 .tours-grid-inner .thumb {
@@ -548,7 +591,19 @@ section#blog, section#related-articles {
 }
 
 .page-home .tours-grid-inner .thumb .title {
-    bottom: -50px;	
+    bottom: -100px;	
+}
+
+.tours-grid-inner .thumb .title .image-caption {
+	height: 50px;
+    float: left;
+    width: 100%;
+}
+
+.tours-grid-inner .thumb .title .image-caption span {
+    height: 50px; /* image's height */
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .tours-grid-inner .thumb .title .desc {
@@ -556,12 +611,14 @@ section#blog, section#related-articles {
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
     font-weight: 300;
-    font-size: 10px;
-    line-height: 12px;
-    padding: 0 0 10px 0;
-    position:relative;
-    bottom:0;
-    z-index:1;	
+    font-size: 13px;
+    line-height: 21px;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+    float: left;
+    width: 100%;	
 }
 
 .tours-grid-inner.single .thumb .title {
@@ -593,7 +650,7 @@ section#blog, section#related-articles {
 }
 
 #blog .sub-section-heading.left {
-	margin: 0 0 30px 0;
+	margin: 20px 0 30px 0;
 }
 
 .tours-grid-inner .col-lg-4,
@@ -713,9 +770,15 @@ footer .go-to-top span {
     color: #FFF;
     outline: 0;
     border: none;
-    width: 200px;
+    width: 205px;
     padding: 10px 0 5px 0;
-    margin: 10px 20px 5px 0;
+    margin: 10px 15px 5px 0;
+}
+
+.btn-default-purple.play-video {
+    background: url(/img/icon-btn-play-video.png) no-repeat 160px 2px #6b3077;
+    padding: 10px 0px 5px 25px;
+    text-align: left;
 }
 
 .btn-default-purple:hover, .btn-default-purple:active, .btn-default-purple:focus {
@@ -733,7 +796,11 @@ footer .go-to-top span {
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
-    line-height: 21px;	
+    line-height: 24px;	
+}
+
+.form-group-date {
+    background: url(/img/bg-btn-date.png) no-repeat 168px 26px;	
 }
 
 .form-control {
@@ -741,6 +808,98 @@ footer .go-to-top span {
     outline: 0;
     border-radius: 0;
     background: #d0d0d0;	
+}
+
+input[type=text], input[type=email], input[type=date] {
+    height: 40px;	
+}
+
+input[type=date] {
+    width: 160px;	
+}
+
+textarea#travelNotes {
+    height: 280px;	
+}
+
+/* modals */
+
+.jsif-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.jsif-modal .modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 100%;
+    background: url(/img/bg-000000-80.png) 0 0 repeat;
+}
+
+.jsif-modal#emailModal1 .modal-content {
+    padding: 100px 0;
+    background: url(/img/bg-000000-80.png) 0 0 repeat;
+}
+
+.jsif-modal video {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: 100%; height: auto; z-index: 100;
+}
+
+/* share this */
+.label-sharethis {
+    width: 200px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 40px;	
+}
+
+.share-this ul {
+    height: 30px;
+    margin: 3px 0 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.share-this ul li {
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 36px;
+}
+
+.share-this ul li a {
+    width: 36px;
+    height: 36px;
+    text-indent: -9999px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.share-this ul li.share-fb a {
+    background: url(/img/icon-fb.png) no-repeat center 0;
+}
+
+.share-this ul li.share-twitter a {
+    background: url(/img/icon-twitter.png) no-repeat center 0;
+}
+
+.share-this ul li.share-pinterest a {
+    background: url(/img/icon-pinterest.png) no-repeat center 0;
+}
+
+.share-this ul li.share-googleplus a {
+    background: url(/img/icon-googleplus.png) no-repeat center 0;
+}
+
+.share-this ul li.share-email a {
+    background: url(/img/icon-email.png) no-repeat center 0;
 }
 
 .best-for {
@@ -755,12 +914,12 @@ footer .go-to-top span {
 .best-for ul li {    
     float: left;
     list-style-type: none;
-    padding: 0 10px;
+    padding: 0 20px 0 0 !important;
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 12px;
-    line-height: 48px;
+    line-height: 60px;
     margin: 0;
     padding: 10px 0 0 0;
     text-transform: uppercase;
@@ -768,6 +927,19 @@ footer .go-to-top span {
 
 .best-for ul li img {
     float: left;	
+}
+
+a.read-more {
+	color: #771888;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+a.read-more span.glyphicon {
+    color: #771888;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 12px;	
 }
 
 @media (min-width:1240px) {
@@ -797,15 +969,16 @@ footer .go-to-top span {
     }
 }
 
-@media (min-width:1200px) {
+@media(min-width:1200px) {
     .tours-grid-inner {
         padding: 0;
         border: 9px solid #FFF;
         margin-bottom: 30px;
-    }	
+    }	    
 }
 
 @media(max-width:1199px) {
+    
     body.page-home {
         background: url(/img/bg-hero-m.png) center top no-repeat;
     }
@@ -887,6 +1060,10 @@ footer .go-to-top span {
     
     .navbar-nav>li {
         float: none;
+    }
+    
+    .navbar-nav li.searchBox > form input.searchbox {
+        width: 100%;
     }
     
     .navbar-nav>li>a {
@@ -1041,14 +1218,29 @@ footer .go-to-top span {
         background: #6b3077;
     }
     
+    .navbar-nav .open .dropdown-menu {
+	    position: static;
+	    float: none;
+	    width: auto;
+	    margin-top: 0;
+	    background-color: transparent;
+	    border: 0;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+	}
+    
     .container {
         width: auto !important;
     }     
 }
 
 @media only screen and (min-width:993px) and (max-width: 1199px) {
+	.navbar-nav li.searchBox.mobile > form {
+	   text-align: left;
+	}
+    
     .tours-grid.col-lg-4 {
-        width: 50%;
+        width: 49.25%;
 	    float: left;
 	    display: inline-block;
     }
@@ -1059,14 +1251,20 @@ footer .go-to-top span {
         display: inline-block;    
     }
     
+    section#related-articles .section-image .thumb img {
+        width: 100%;
+    }
+    
     footer .container .col-lg-9 {
 	    width: 60%;
 	    float: left;    
     }
-   
 }
    
 @media(max-width:992px) {
+	.navbar-nav li.searchBox.mobile > form {
+       text-align: left;
+    }
 	    
     .navbar-nav li.searchBox.mobile {
        display: block;
@@ -1077,7 +1275,7 @@ footer .go-to-top span {
     .navbar-nav li.searchBox.mobile > form {
         padding: 15px 0;
         width: 100%;
-    } 
+    }
     
     .container.subnav {
         display: none;
@@ -1086,6 +1284,11 @@ footer .go-to-top span {
     .tours-grid-inner {
        border: 10px solid #FFF;
        margin-bottom: 20px; 
+    }
+    
+    .tours-grid.col-lg-4 {
+        width: 100%;
+        padding: 0 15px;
     }
     
     .row.load-more {
