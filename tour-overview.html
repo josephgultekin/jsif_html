@@ -166,7 +166,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-	                <h1>Rastafari Indigenous Village</h1>
+	                <h1>Rastafari<br />Indigenous Village</h1>
 	                <h3>A unique opportunity to experience the rastafari way of life</h3>
                 </div>
             </div>
@@ -193,6 +193,11 @@
                                 <span>Title of staff member goes here.</span>
                             </span>
                         </div>
+                        <div class="play-video-wrapper Absolute-Center is-Variable">
+	                        <a data-target="#videoModal1" data-toggle="modal" href="#" class="play-video">
+	                            <img src="/img/bg-btn-play.png" alt="Play video" />
+	                        </a>
+	                    </div>
                     </div>
                 </div>
             </div>
@@ -347,8 +352,9 @@
     <section id="map">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15136.135705182349!2d-77.9293191!3d18.4821224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2536dd88f8c760a2!2sDonway%2C+A+Jamaican+Style+Village!5e0!3m2!1sen!2sau!4v1447681142671" width="100%" height="450" frameborder="0" style="border:0; pointer-events:none;" allowfullscreen></iframe>
+                <div class="col-lg-12 maps embed-container">
+                    <div class="overlay-map" onClick="style.pointerEvents='none'"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15136.135705182349!2d-77.9293191!3d18.4821224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2536dd88f8c760a2!2sDonway%2C+A+Jamaican+Style+Village!5e0!3m2!1sen!2sau!4v1447681142671" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -484,6 +490,26 @@
         <!-- /.container -->
     </footer>
 
+    <!-- Play Video Modal -->
+    <div class="jsif-modal modal fade" id="videoModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <video class="hero-img" width="100%" loop="" controls="" preload="true" autoplay="false">
+                                    <source src="/video/jamaica.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

@@ -6,6 +6,11 @@
     src: url("/fonts/earthwerk.otf") format("opentype");
 }
 
+html
+{
+  -webkit-tap-highlight-color:transparent;
+}
+
 body {
 	overflow-x: hidden;
     font-family: 'Open Sans', sans-serif !important;
@@ -19,6 +24,19 @@ body {
 body p.lead-paragraph {
 	font-size: 18px;
     font-weight: 600;	
+}
+
+a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+img {
+	border-style: none;
 }
 
 nav {
@@ -72,7 +90,8 @@ section.gallery {
 
 section.gallery .container {
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 20px auto;
+    max-width: 1600px;
     width: 100%;
 }
 
@@ -469,7 +488,9 @@ section#experience .row h3 {
     font-family: Earthwerk !important;
     font-size: 21px;
     letter-spacing: 1px;
-    color: #50a8c2;    	
+    color: #50a8c2;
+    line-height: 28px;
+    width: 350px;    	
 }
 
 .container .row .col-left,
@@ -534,6 +555,10 @@ section {
 
 section#tours {
     background: url(/img/bg-page-panel.png) center 250px no-repeat;   
+}
+
+.page-home section#tours {
+    background: url(/img/bg-home-panel.png) center 50px no-repeat;   
 }
 
 section#blog, section#related-articles {
@@ -785,6 +810,18 @@ footer .go-to-top span {
     color: #d0d0d0;    	
 }
 
+button.close {
+	font-size: 48px;
+    color: #eee;
+    text-shadow: none;
+    opacity: 1;
+    font-weight: normal;
+}
+
+button.close:hover {
+    color: #fff;	
+}
+
 /* forms */
 .form-group {
     margin-bottom: 48px;	
@@ -942,18 +979,48 @@ a.read-more span.glyphicon {
     font-size: 12px;	
 }
 
+.play-video-wrapper {
+	width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.play-video-wrapper a.play-video {
+    height: 120px;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.overlay-map {
+    height: 450px;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    max-width: 1600px;
+    background:transparent;
+}
+
 @media (min-width:1240px) {
 	.container {
 	    width: 1240px;
 	}
 	
-	section.gallery .container
-       width: 100%;
+	section.gallery .container {
+        max-width: 1600px;
+	    margin: 0 auto;
+	    width: 100%;
     }
     	
 	section#map .container {
-	   width: 100%;
-	   padding: 35px 0;
+        padding: 35px 0;
+        max-width: 1600px;
+        width: 100%;
+	}
+
+	section#tour-welcome {
+	    background: none;
+	    margin-top: 30px;
 	}
 	
 	.tours-grid-inner {
@@ -974,6 +1041,7 @@ a.read-more span.glyphicon {
         padding: 0;
         border: 9px solid #FFF;
         margin-bottom: 30px;
+        position: relative;
     }	    
 }
 

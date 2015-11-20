@@ -4,6 +4,8 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
 	
+	$("video").prop('muted', true); //mute
+	
 	// For v2 [data-toggle="dropdown"] is required for [data-submenu].
 	// For v2 .dropdown-submenu > [data-toggle="dropdown"] is forbidden.
 	$('[data-submenu]').submenupicker();
@@ -105,4 +107,46 @@ $( document ).ready(function() {
 	    var fbpopup = window.open("https://plusone.google.com/_/+1/confirm?hl=en&url=http://www.visitjamaica.com&title=Visit Jamaica", "pop", "width=600, height=400, scrollbars=no");
 	    return false;
 	});
+	
+	$('button.play-video, a.play-video').click(function(){
+		$(".modal video").prop('muted', false);
+		$(".modal video").prop('autoplay', true);
+	});
+	
+	$('.modal button.close').click(function(){
+		$(".modal video").prop('muted', true);
+		$(".modal video").prop('autoplay', false);
+	});
+	
+	$("button.explore").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("section#tours").offset().top - 100
+	    }, 1000);
+	});
+	
+	// Disable scroll zooming and bind back the click event
+	var onMapMouseleaveHandler = function (event) {
+	  var that = $(this);
+
+	  that.on('click', onMapClickHandler);
+	  that.off('mouseleave', onMapMouseleaveHandler);
+	  that.find('iframe').css("pointer-events", "none");
+	}
+
+	var onMapClickHandler = function (event) {
+	  var that = $(this);
+
+	  // Disable the click handler until the user leaves the map area
+	  that.off('click', onMapClickHandler);
+
+	  // Enable scrolling zoom
+	  that.find('iframe').css("pointer-events", "auto");
+
+	  // Handle the mouse leave event
+	  that.on('mouseleave', onMapMouseleaveHandler);
+	}
+
+	// Enable map zooming with mouse scroll when the user clicks the map
+	$('.maps.embed-container').on('click', onMapClickHandler);
+	
 });
