@@ -613,6 +613,7 @@ section#related-articles .section-image {
     font-size: 18px;
     letter-spacing: 1px;
     cursor: pointer;
+    min-height: 165px;
 }
 
 .page-home .tours-grid-inner .thumb .title {
@@ -1403,7 +1404,7 @@ a.read-more span.glyphicon {
 	body.page-home header .container .row {
 	    margin: 140px 0 0 0;
 	}
-	
+    
 	section.subheader {
 	    margin: 0;
 	    padding: 0;
