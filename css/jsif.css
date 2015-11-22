@@ -1400,6 +1400,9 @@ a.read-more span.glyphicon {
 }
 
 @media(max-width:768px) {
+	body.page-home header .container .row {
+	    margin: 140px 0 0 0;
+	}
 	
 	section.subheader {
 	    margin: 0;
